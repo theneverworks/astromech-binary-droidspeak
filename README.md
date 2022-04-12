@@ -1,12 +1,12 @@
 # astromech-binary-droidspeak
 Entirely offline Windows based keyword spotting and binary 'droid speak' beep language translation for your Astromech droid.
 
-A new OFFLINE version of https://github.com/theneverworks/astromech-binary-droidspeak-ibm-watson.
+A new OFFLINE version of https://github.com/theneverworks/astromech-binary-droidspeak-aiml.
 
 # WORK IN PROGRESS
 I have a lot of clean up. This is not perfect. I want to add a better mechanism for managing droid profiles without code edits. Maybe command line switches for known droids.
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/cbyKz-TZIbQ/0.jpg)](http://www.youtube.com/watch?v=cbyKz-TZIbQ "R4 Droid Speak Speech Recognition Demo 3")
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/3LUnMmUf-UM/0.jpg)](http://www.youtube.com/watch?v=3LUnMmUf-UM "R4 Droid Speak Speech Recognition Demo 4")
 
 # Purpose
 I wanted to power a home built Star Wars inspired droid with their binary droid speak seen in the movies. I wanted a real experience with natural language understanding and keyword spotting. To achieve this, I employ Windows Speech Recognition and Speech Studio custom keywords to recognize when I’m talking to the droid, e.g., “R2 what is your name?” Once the keyword is detected, a recording of the sound for an adjustable duration is collected. The sound sample is submitted to IBM Speech to Text services and the text output is submitted to IBM Watson Assistant for natural language understanding. The returned payload is parsed by the code for commands to execute locally and for sound output. I use the “pronouncing” module in python to break the returned text output into one (1) of thirty-nine (39) phonemes by breaking it into syllables and assigning each syllable a frequency. The frequency is submitted to the Windows Beep API for beeping audio output.
@@ -44,6 +44,21 @@ https://pypi.org/project/python-aiml/
 
 ## AIML Files for Personality
 https://github.com/pandorabots/Free-AIML
+
+## Download Sound Files
+https://github.com/reeltwo/BleepBox/tree/master/assets
+
+Grab all MP3s from the BleepBox repo you wish to use.
+
+Sort them into a file structure as suggested. This is for future sentiment analysis.
+
+conn - Connective Sounds
+neg - Responsive Negative
+neu - Responsive Neutral
+pos - Responsive Positive
+proneg - Proactive Negative
+proneu - Proactive Neutral
+propos - Proactive Positive
 
 # Edits
 ## droid_speech.py
