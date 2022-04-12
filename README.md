@@ -83,7 +83,7 @@ Edit the table name to point to the included pretrained models. By default, the 
     keyword = "R4"
  ```
  
-You could/should adjust the filters that remove the keyword(s) from the payload before it is sent to Watson Assistant. This helps with accuracy but isn’t required. Some of these filters will emerge though reviewing the analytics in Watson Assistant.
+You could/should adjust the filters that remove the keyword(s) from the payload before it is sent to Deep Speech. This helps with accuracy but isn’t required.
 
 ```
 str = str.replace('are four ','').replace('Are Four ', '').replace('are Four ', '').replace('are 4 ', '').replace('our four ', '').replace('Our Four ', '').replace('our 4 ', '').replace('r 4 ', '').replace('R. for ', '')
