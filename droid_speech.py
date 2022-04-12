@@ -4,7 +4,7 @@
 # Copyright (c) Microsoft. All rights reserved.
 # Licensed under the MIT license. See LICENSE.md file in the project root for full license information.
 
-# Contains code samples from Pronouncing Tutorialss
+# Contains code samples from Pronouncing Tutorials
 # https://pronouncing.readthedocs.io/en/latest/tutorial.html
 """
 Speech recognition samples for the Microsoft Cognitive Services Speech SDK
@@ -33,6 +33,7 @@ import aiml
 import csv
 import numpy as np
 import serial
+# Future Sentiment Analysis
 #from nltk.sentiment import SentimentIntensityAnalyzer
 from playsound import playsound
 
@@ -45,6 +46,7 @@ lm_beta = 1.85
 dsmodel.setScorerAlphaBeta(lm_alpha, lm_beta)
 beam_width = 500
 dsmodel.setBeamWidth(beam_width)
+# Future Sentiment Analysis
 #sia = SentimentIntensityAnalyzer()
 
 connecteddevicecount = 0
@@ -281,6 +283,7 @@ def playnote(n, emote):
 
 def mechsay(message):
     try:
+        # Future Sentiment Analysis
         #sentscore = sia.polarity_scores(message)
         #compsentscore = sia.polarity_scores(message)["compound"]
         #possentscore = sia.polarity_scores(message)["pos"]
