@@ -52,11 +52,17 @@ Grab all MP3s from the BleepBox repo you wish to use.
 Sort them into a file structure as suggested. This is for future sentiment analysis.
 
 conn - Connective Sounds
+
 neg - Responsive Negative
+
 neu - Responsive Neutral
+
 pos - Responsive Positive
+
 proneg - Proactive Negative
+
 proneu - Proactive Neutral
+
 propos - Proactive Positive
 
 # Edits
