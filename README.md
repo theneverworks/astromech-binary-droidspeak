@@ -1,7 +1,7 @@
 # astromech-binary-droidspeak
 Entirely offline Windows based keyword spotting and binary 'droid speak' beep language translation for your Astromech droid.
 
-A new OFFLINE version of https://github.com/theneverworks/astromech-binary-droidspeak-aiml.
+A new version of https://github.com/theneverworks/astromech-binary-droidspeak-aiml with authnetic sounds.
 
 # WORK IN PROGRESS
 I have a lot of clean up. This is not perfect. I want to add a better mechanism for managing droid profiles without code edits. Maybe command line switches for known droids.
@@ -9,7 +9,7 @@ I have a lot of clean up. This is not perfect. I want to add a better mechanism 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/3LUnMmUf-UM/0.jpg)](http://www.youtube.com/watch?v=3LUnMmUf-UM "R4 Droid Speak Speech Recognition Demo 4")
 
 # Purpose
-I wanted to power a home built Star Wars inspired droid with their binary droid speak seen in the movies. I wanted a real experience with natural language understanding and keyword spotting. To achieve this, I employ Windows Speech Recognition and Speech Studio custom keywords to recognize when I’m talking to the droid, e.g., “R2 what is your name?” Once the keyword is detected, a recording of the sound for an adjustable duration is collected. The sound sample is submitted to IBM Speech to Text services and the text output is submitted to IBM Watson Assistant for natural language understanding. The returned payload is parsed by the code for commands to execute locally and for sound output. I use the “pronouncing” module in python to break the returned text output into one (1) of thirty-nine (39) phonemes by breaking it into syllables and assigning each syllable a frequency. The frequency is submitted to the Windows Beep API for beeping audio output.
+I wanted to power a home built Star Wars inspired droid with their binary droid speak seen in the movies. I wanted a real experience with natural language understanding and keyword spotting. To achieve this, I employ Windows Speech Recognition and Speech Studio custom keywords to recognize when I’m talking to the droid, e.g., “R2 what is your name?” Once the keyword is detected, a recording of the sound for an adjustable duration is collected. The sound sample is submitted to Deep Speech and the text output is submitted to NLTK for natural language understanding and AIML for conversation if desired. The returned payload is parsed by the code for commands to execute locally and for sound output. I use the “pronouncing” module in python to break the returned text output into one (1) of thirty-nine (39) phonemes by breaking it into syllables and assigning each syllable a group of BleepBox sound files.
 
 # Notes
 This code adapts the Microsoft Speech Custom Keyword python sample available through the SDK.
@@ -27,9 +27,8 @@ https://pypi.org/project/pronouncing/
 ## Install Sounddevice
 https://pypi.org/project/sounddevice/
 
-## Install Winsound
-Built in.
-https://docs.python.org/3/library/winsound.html
+## Install Playsound
+https://pypi.org/project/playsound/
 
 ## Install Deepspeech 0.9.3
 https://pypi.org/project/deepspeech/
